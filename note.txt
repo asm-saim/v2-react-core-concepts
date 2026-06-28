@@ -1,0 +1,8 @@
+##Previous Learning:
+1. react.
+2. component (Capital letter, return (), export, import)
+3. jsx -> {dynamic value}
+4. conditional rendering
+5. list rendering(map)
+
+##Today:
