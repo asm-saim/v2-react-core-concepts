@@ -1,7 +1,10 @@
 import { useState } from "react"
 
 export default function Counter() {
-    const [count, setCount] = useState(0)
+    const [count, setCount] = useState(0) 
+    // count → the current state value. 
+    // setCount → a function to update that value.
+    // The 0 is the initial value.
 
     const handleCount = () => {
         const newCount = count + 1;

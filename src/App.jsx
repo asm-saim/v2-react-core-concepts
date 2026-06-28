@@ -1,5 +1,6 @@
 import './App.css'
 import Counter from './Counter'
+import Batsman from './Batsman'
 
 function App() {
   // event Handler:case 1
@@ -31,6 +32,9 @@ function App() {
 
         {/* Lesson-2 use State */}
         <Counter></Counter>
+
+        {/* Lesson-3 useState */}
+        <Batsman></Batsman>
 
       </div>
     </>
