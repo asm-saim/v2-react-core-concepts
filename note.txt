@@ -10,8 +10,10 @@ A function that runs when a user performs an action (click, type, submit, etc.).
 * In html we use, <button onclick="handleClick()">Click</button>
 * But in react we use, <button onClick={handleClick}>Click</button>
 
-## State Change in React:
+## React State :     const [current value, setValue]=useState(initial value)
 
+Scope: The area where a variable can be accessed.
+Closure: A function that remembers and can use variables from its outer scope even after the outer function has finished executing.
 
 
   
