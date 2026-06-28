@@ -5,4 +5,13 @@
 4. conditional rendering
 5. list rendering(map)
 
-##Today:
+## Event Handler in react:
+A function that runs when a user performs an action (click, type, submit, etc.).
+* In html we use, <button onclick="handleClick()">Click</button>
+* But in react we use, <button onClick={handleClick}>Click</button>
+
+## State Change in React:
+
+
+
+  
