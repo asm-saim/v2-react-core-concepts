@@ -5,6 +5,7 @@ import Users from './Users'
 import { Suspense } from 'react'
 import Friends from './Friends'
 import Albums from './Albums'
+import Players from './Players'
 
 
 // fetch the data from api:
@@ -73,6 +74,8 @@ function App() {
         <Albums albums={albums}></Albums>
         </Suspense>
 
+        {/* useEffect */}
+          <Players></Players>
       </div>
     </>
   )

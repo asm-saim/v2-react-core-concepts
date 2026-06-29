@@ -1,5 +1,6 @@
 export default function Album({ album }) {
-    console.log(album)
+    // const {id, title}=album
+    // console.log(album)
     return (
         <div className="universal">
             <h4>User ID: {album.id}</h4>

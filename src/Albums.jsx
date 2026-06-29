@@ -9,7 +9,7 @@ export default function Albums({ albums }) {
         <div className="universal">
             <h4>Total Albums: {allAlbums.length}</h4>
             {
-                allAlbums.map(album=><Album keys={album.id} album={album}></Album>)
+                allAlbums.map(album => <Album key={album.id} album={album}></Album>)
             }
         </div>
     )
