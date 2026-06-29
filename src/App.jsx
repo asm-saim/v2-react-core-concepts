@@ -3,6 +3,7 @@ import Counter from './Counter'
 import Batsman from './Batsman'
 import Users from './Users'
 import { Suspense } from 'react'
+import Friends from './Friends'
 
 function App() {
   // event Handler:case 1
@@ -25,6 +26,14 @@ function App() {
   const callData = fetch("https://jsonplaceholder.typicode.com/users")
     .then(res => res.json())
 
+  // using async, await:
+  const callFriends = async () => {
+    const res = await fetch("https://jsonplaceholder.typicode.com/users");
+    return res.json();
+  }
+
+  const callFriend = callFriends();
+
   return (
     <>
       <div id='center'>
@@ -45,6 +54,11 @@ function App() {
         {/* lesson-4 suspense & use(react-api) */}
         <Suspense fallback={<h2>Loading...</h2>}>
           <Users callData={callData}></Users>
+        </Suspense>
+
+        {/* Ex:2 of api */}
+        <Suspense fallback={<h2>Friends are coming...</h2>}>
+          <Friends callFriend={callFriend}></Friends>
         </Suspense>
 
       </div>

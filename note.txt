@@ -49,3 +49,5 @@ fallback → What users see while waiting.
 
 ##use: use is a React API that lets you read the value of a Promise or context.
 const value = use(resource);  
+
+##async , await sobsomoy arrow function e use hoi.
