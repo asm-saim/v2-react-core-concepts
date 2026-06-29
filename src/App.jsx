@@ -1,6 +1,8 @@
 import './App.css'
 import Counter from './Counter'
 import Batsman from './Batsman'
+import Users from './Users'
+import { Suspense } from 'react'
 
 function App() {
   // event Handler:case 1
@@ -16,25 +18,34 @@ function App() {
   //event Handler: case3 (passing parameter)
   const handleClick3 = (num) => {
     let value = num + 5;
-    alert (value);
+    alert(value);
   }
+
+  // fetch the data from api:
+  const callData = fetch("https://jsonplaceholder.typicode.com/users")
+    .then(res => res.json())
 
   return (
     <>
       <div id='center'>
-        <h1>Get started</h1>  
-        {/* Lesson-1 Event Handler */}  
+        <h1>Get started</h1>
+        {/* Lesson-1 Event Handler */}
         {/* <button onclick="handleClick()">Click</button>-> in js we use this */}
         <button onClick={handleClick}>Click</button>
         <button onClick={handleClick2}>Click2</button>
         <button onClick={() => alert("Button clicked")}>Click2</button>
-        <button onClick={()=>handleClick3(7)}>Click3</button>
+        <button onClick={() => handleClick3(7)}>Click3</button>
 
         {/* Lesson-2 use State */}
         <Counter></Counter>
 
         {/* Lesson-3 useState */}
         <Batsman></Batsman>
+
+        {/* lesson-4 suspense & use(react-api) */}
+        <Suspense fallback={<h2>Loading...</h2>}>
+          <Users callData={callData}></Users>
+        </Suspense>
 
       </div>
     </>

@@ -4,6 +4,9 @@
 3. jsx -> {dynamic value}
 4. conditional rendering
 5. list rendering(map)
+6. Event handler.
+7. use State hooks.
+
 
 ## Event Handler in react:
 A function that runs when a user performs an action (click, type, submit, etc.).
@@ -19,4 +22,30 @@ Scope: The area where a variable can be accessed.
 Closure: A function that remembers and can use variables from its outer scope even after the outer function has finished executing.
 
 
-  
+//js API pattern:
+fetch("url")
+.then(res=>res.json())
+.then(data=>console.log(data))
+
+or,
+const apiFunc=()=>{
+    const res= await fetch(url)
+    const data= await res.json()
+
+    return data; 
+}
+
+##in react we use suspense and use to load the data from api.
+##suspense:
+<Suspense> Suspense is a React component that shows a loading UI while something is loading.
+
+Ex:
+<Suspense fallback={<Loading..... />}>
+  <Users />
+</Suspense>
+fallback → What users see while waiting.
+<Users /> → The component that is loading.
+
+
+##use: use is a React API that lets you read the value of a Promise or context.
+const value = use(resource);  
