@@ -5,6 +5,25 @@ import Users from './Users'
 import { Suspense } from 'react'
 import Friends from './Friends'
 
+
+// fetch the data from api:
+// const callData = fetch("https://jsonplaceholder.typicode.com/users")
+//   .then(res => res.json())
+
+// using async, await:
+// const callFriends = async () => {
+//   const res = await fetch("https://jsonplaceholder.typicode.com/users");
+//   return res.json();
+// }
+// const callFriend = callFriends();
+
+// Ex:3 using async await:
+const callAlbums = async () => {
+  const res = await fetch("https://jsonplaceholder.typicode.com/albums")
+  return res.json()
+}
+const albums=callAlbums()
+
 function App() {
   // event Handler:case 1
   function handleClick() {
@@ -22,17 +41,6 @@ function App() {
     alert(value);
   }
 
-  // fetch the data from api:
-  const callData = fetch("https://jsonplaceholder.typicode.com/users")
-    .then(res => res.json())
-
-  // using async, await:
-  const callFriends = async () => {
-    const res = await fetch("https://jsonplaceholder.typicode.com/users");
-    return res.json();
-  }
-
-  const callFriend = callFriends();
 
   return (
     <>
@@ -51,15 +59,14 @@ function App() {
         {/* Lesson-3 useState */}
         <Batsman></Batsman>
 
-        {/* lesson-4 suspense & use(react-api) */}
+        {/* {/* lesson-4 suspense & use(react-api)
         <Suspense fallback={<h2>Loading...</h2>}>
           <Users callData={callData}></Users>
-        </Suspense>
-
-        {/* Ex:2 of api */}
+        </Suspense> */}
+        {/* Ex:2 of api 
         <Suspense fallback={<h2>Friends are coming...</h2>}>
           <Friends callFriend={callFriend}></Friends>
-        </Suspense>
+        </Suspense> */}
 
       </div>
     </>
