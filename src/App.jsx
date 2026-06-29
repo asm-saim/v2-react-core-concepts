@@ -4,6 +4,7 @@ import Batsman from './Batsman'
 import Users from './Users'
 import { Suspense } from 'react'
 import Friends from './Friends'
+import Albums from './Albums'
 
 
 // fetch the data from api:
@@ -20,9 +21,9 @@ import Friends from './Friends'
 // Ex:3 using async await:
 const callAlbums = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/albums")
-  return res.json()
+  return res.json();
 }
-const albums=callAlbums()
+const albums=callAlbums();
 
 function App() {
   // event Handler:case 1
@@ -67,6 +68,10 @@ function App() {
         <Suspense fallback={<h2>Friends are coming...</h2>}>
           <Friends callFriend={callFriend}></Friends>
         </Suspense> */}
+
+        <Suspense fallback={<h4>Albums data are loading...</h4>}>
+        <Albums albums={albums}></Albums>
+        </Suspense>
 
       </div>
     </>
