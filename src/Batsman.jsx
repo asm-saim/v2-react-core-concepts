@@ -24,9 +24,15 @@ export default function Batsman() {
     }
 
     return (
+
         <div>
             <h2>Batsman's score Counter</h2>
-            <h2>Score: {score}</h2> 
+            {/* conditional Rendering */}
+            {
+                score >= 50 && <h1>Congrats! Half Century.</h1>
+            }
+
+            <h2>Score: {score}</h2>
             <h2>Total Six:{six}</h2>
             <button onClick={handleSingle}>Add Single</button>
             <button onClick={handleFour}>Add Four</button>
