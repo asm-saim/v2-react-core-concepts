@@ -6,6 +6,7 @@ import { Suspense } from 'react'
 import Friends from './Friends'
 import Albums from './Albums'
 import Players from './Players'
+import PracticeCount from './PracticeCount'
 
 
 // fetch the data from api:
@@ -24,7 +25,7 @@ const callAlbums = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/albums")
   return res.json();
 }
-const albums=callAlbums();
+const albums = callAlbums();
 
 function App() {
   // event Handler:case 1
@@ -61,6 +62,9 @@ function App() {
         {/* Lesson-3 useState */}
         <Batsman></Batsman>
 
+        {/* practice Counter */}
+        <PracticeCount></PracticeCount>
+
         {/* {/* lesson-4 suspense & use(react-api)
         <Suspense fallback={<h2>Loading...</h2>}>
           <Users callData={callData}></Users>
@@ -71,11 +75,11 @@ function App() {
         </Suspense> */}
 
         <Suspense fallback={<h4>Albums data are loading...</h4>}>
-        <Albums albums={albums}></Albums>
+          <Albums albums={albums}></Albums>
         </Suspense>
 
         {/* useEffect */}
-          <Players></Players>
+        <Players></Players>
       </div>
     </>
   )

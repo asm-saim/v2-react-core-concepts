@@ -58,3 +58,6 @@ const value = use(resource);
 ##async , await sobsomoy arrow function e use hoi.
 
 #previously, we use useEffect instead of suspense & use hook.
+
+use() — Used to read the result of a Promise in React's newer data-fetching model, often together with Suspense. It is not the traditional Hook for side effects.
+useState() — Used to store and update state, not perform side effects.
