@@ -12,12 +12,16 @@ export default function PracticeCount() {
         const newCount = count - 1;
         setCount(newCount)
     }
+
+    const reset=()=>{
+        setCount(0)
+    }
     return (
-        <div className="universal">
+        <div className="universal button">
             <h2>Count:{count}</h2>
             <button onClick={countPlus}>Count +</button>
-            <br />
             <button onClick={countMinus}>Count -</button>
+            <button onClick={reset}>Reset</button>
 
         </div>
     )

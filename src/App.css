@@ -191,4 +191,9 @@
   padding: 20px;
   margin: 20px;
   border-radius: 20px;
+
+}
+
+.universal button {
+  margin-right: 10px;
 }
