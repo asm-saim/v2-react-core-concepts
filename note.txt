@@ -13,6 +13,19 @@ A function that runs when a user performs an action (click, type, submit, etc.).
 * In html we use, <button onclick="handleClick()">Click</button>
 * But in react we use, <button onClick={handleClick}>Click</button>
 
+------------------------------------------------------------
+These three are all React Hooks, but they have different jobs.
+
+Hook	    Purpose	                When to use
+useState	Store and update state	When data changes because of user actions or your app logic
+useEffect	Perform side effects	 Fetch data, set timers, add event listeners, etc.
+use()- Read the result of a Promise  In React's newer async data-fetching pattern, usually with Suspense                	
+------------------------------------------------------------
+
+
+
+
+
 ## React State : 
  useState: useState is a Hook used to store and update state.   
  

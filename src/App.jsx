@@ -7,6 +7,7 @@ import Friends from './Friends'
 import Albums from './Albums'
 import Players from './Players'
 import PracticeCount from './PracticeCount'
+import Toggle from './Toggle'
 
 
 // fetch the data from api:
@@ -64,6 +65,10 @@ function App() {
 
         {/* practice Counter */}
         <PracticeCount></PracticeCount>
+
+
+        {/* Toggle */}
+        <Toggle></Toggle>
 
         {/* {/* lesson-4 suspense & use(react-api)
         <Suspense fallback={<h2>Loading...</h2>}>
